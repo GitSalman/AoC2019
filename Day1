@@ -7,11 +7,10 @@ namespace Day1AoC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             int total = 0;
 
             string[] lines = File.ReadAllLines("D:/Salman/AdventOfCode/cSharp/Day1VS/Day1/Day1AoC/input.txt");
+            
             foreach (string line in lines)
             {
                 total += ((int.Parse(line) / 3) - 2);
