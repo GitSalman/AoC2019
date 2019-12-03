@@ -1,0 +1,23 @@
+using System;
+using System.IO;
+
+namespace Day1AoC
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            int total = 0;
+
+            string[] lines = File.ReadAllLines("D:/Salman/AdventOfCode/cSharp/Day1VS/Day1/Day1AoC/input.txt");
+            foreach (string line in lines)
+            {
+                total += ((int.Parse(line) / 3) - 2);
+                Console.WriteLine(int.Parse(line) / 3);
+            }
+            Console.WriteLine(total);
+            }
+    }
+}
