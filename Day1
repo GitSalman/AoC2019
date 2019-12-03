@@ -13,8 +13,19 @@ namespace Day1AoC
             
             foreach (string line in lines)
             {
-                total += ((int.Parse(line) / 3) - 2);
-                Console.WriteLine(int.Parse(line) / 3);
+                int moduleFuel = 0;
+                moduleFuel = ((int.Parse(line) / 3) - 2);
+                Console.WriteLine("Current Line: " + int.Parse(line));
+
+                while (moduleFuel >= 0) //Here I initially add the above moduleFuel to the total, then begin calculating the fuel's fuel cost
+                {
+                    total += moduleFuel;
+                    moduleFuel = ((moduleFuel / 3) - 2);
+                    Console.WriteLine("Total: " + total);
+                    Console.WriteLine("Module Fuel: " + moduleFuel);
+                }
+                Console.WriteLine("\n");
+                
             }
             Console.WriteLine(total);
             }
